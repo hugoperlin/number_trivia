@@ -15,16 +15,9 @@ public class ImplNumberTriviaRepository implements INumberTriviaRepository{
 
     public NumberTrivia getTrivia(int number){
 
-        if(number < 0){
-            throw new Failure("Invalid number!");
-        }
+        //TODO
 
-        try{
-            NumberTrivia trivia = triviaDAO.getTrivia(number);
-            return trivia;
-        }catch(Exception e){
-            throw new Failure(e.getMessage());
-        }
+        return null;
     } 
 
     public NumberTrivia getRandomTrivia(){

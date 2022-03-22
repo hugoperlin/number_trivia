@@ -28,24 +28,10 @@ public class PrimaryController {
 
     @FXML
     private void getTrivia(){
-
+        String error = "";
         hideError();
 
-        String sNumber = tfNumber.getText();
-        String error="";
-        try{
-            int number = Integer.valueOf(sNumber);
-
-            NumberTrivia ret = repository.getTrivia(number);
-
-            txtTrivia.setText(ret.getText());
-            return;
-            
-        }catch(NumberFormatException e){
-            error = "Invalid number!";
-        }catch(Failure e){
-            error = e.getMessage();
-        }
+        //TODO
         
         showError(error);
 
